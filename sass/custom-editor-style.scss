@@ -1,0 +1,150 @@
+@import "theme"; 
+
+body {
+	.table-of-contents, .components-editor-notices__dismissible,.components-editor-notices__dismissible .components-notice, .components-editor-notices__pinned .components-notice, input[id^="block-editor-inserter__search-"]:placeholder-shown+.block-editor-inserter__results .components-panel__body:first-of-type, .block-editor-inserter__menu-help-panel{
+		display: none !important;
+	}
+	
+	.block-editor-block-navigation__item-button:focus:not(:disabled):not([aria-disabled=true]) {
+		outline: none;
+	}
+	
+	.block-editor-inserter__menu.has-help-panel {
+		width: 400px;
+	}
+	
+	.components-panel__body-toggle.components-button:focus:not(:disabled):not([aria-disabled=true]) {
+		outline: none;
+	}
+	
+	.edit-post-visual-editor {
+		padding-top: 30px;
+	}
+	
+	.editor-post-title {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	
+	/* Structure --------------------------------- */
+	
+	.wp-block {
+		max-width: 100%;
+	}
+	
+	.editor-styles-wrapper [data-block] {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	.block-editor-block-toolbar {
+		.components-toolbar:first-child {
+ 			display: none;
+		}
+	}
+	
+	/* Font Families ------------------------------ */
+	
+	.editor-styles-wrapper p,
+	.editor-styles-wrapper p.wp-block-paragraph,
+	.editor-styles-wrapper ol,
+	.editor-styles-wrapper ul,
+	.editor-styles-wrapper li,
+	.editor-styles-wrapper dl,
+	.editor-styles-wrapper dt {
+		font-family: $font-family-base;
+		letter-spacing: normal;
+		font-size: $font-size-base;
+		line-height: $line-height-base;
+	}
+	
+	.editor-styles-wrapper p,
+	.editor-styles-wrapper p.wp-block-paragraph {
+		margin-top: 0;
+		margin-bottom: $paragraph-margin-bottom;
+	}
+	
+	.editor-post-title__block .editor-post-title__input,
+	.editor-styles-wrapper .wp-block h1,
+	.editor-styles-wrapper .wp-block h2,
+	.editor-styles-wrapper .wp-block h3,
+	.editor-styles-wrapper .wp-block h4,
+	.editor-styles-wrapper .wp-block h5,
+	.editor-styles-wrapper .wp-block h6,
+	.editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter,
+	.editor-styles-wrapper cite,
+	.editor-styles-wrapper figcaption,
+	.editor-styles-wrapper .wp-caption-text {
+		font-family: $font-family-base;
+	}
+	
+	/* Typography -------------------------------- */
+	
+	.editor-styles-wrapper a:focus,
+	.editor-styles-wrapper a:hover {
+		text-decoration: $link-hover-decoration;
+	}
+	
+	.editor-post-title__block .editor-post-title__input,
+	.editor-styles-wrapper .wp-block h1,
+	.editor-styles-wrapper .wp-block h2,
+	.editor-styles-wrapper .wp-block h3,
+	.editor-styles-wrapper .wp-block h4,
+	.editor-styles-wrapper .wp-block h5,
+	.editor-styles-wrapper .wp-block h6 {
+		font-weight: $headings-font-weight;
+		letter-spacing: normal;
+		line-height: $headings-line-height;
+		margin: 0 0 $headings-margin-bottom 0;
+	}
+	
+	.editor-styles-wrapper {
+		.wp-block {
+			h1 {
+				font-size: $h1-font-size;
+				font-weight: $h1-font-weight;
+				line-height: $h1-line-height;
+			}
+			h2 {
+				font-size: $h2-font-size;
+			}
+			h3 {
+				font-size: $h3-font-size;
+			}
+			h4 {
+				font-size: $h4-font-size;
+			}
+			h5 {
+				font-size: $h5-font-size;
+			}
+			h6 {
+				font-size: $h6-font-size;
+			}
+		}
+	}
+	
+	/* POST TITLE */
+	
+	.editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
+		margin: 0;
+		text-align: left;
+		font-size: 20px;
+		background-color: white;
+	}
+	
+	/* GUTENBERG SIDEBAR */
+	.edit-post-sidebar {
+		
+		font-size: $font-size-sm;
+		
+		ol, ul, dl {
+			margin-bottom: inherit;
+		}
+		p {
+			font-size: $font-size-sm;
+		}
+		.editor-page-attributes__order {
+			display: none;
+		}
+	}
+}

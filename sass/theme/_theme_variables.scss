@@ -1,0 +1,32 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+$blue:			#00ABC9;
+$green:			#36A391;
+$light:			#f8f8f8;
+$secondary:		$green;
+$primary-gray: 	#333333;
+
+$font-family-sans-serif: proxima-nova, sans-serif;
+$font-weight-bold: 5500;
+$font-size-base: 1.05rem;
+
+$h1-font-weight: 500;
+$h1-line-height: 1.138888889;
+
+/* Grid */
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1300px
+);
+
+$btn-border-radius: 0;
+$btn-border-radius-lg: 0;
+$btn-border-radius-sm: 0;
+$input-border-width: 0;
+$input-border-radius: 0;
+$input-border-radius-lg: 0;
+$input-border-radius-sm: 0;
