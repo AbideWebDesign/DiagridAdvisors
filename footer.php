@@ -35,9 +35,7 @@ defined( 'ABSPATH' ) || exit;
 				<ul class="list-inline mb-0">
 					
 					<li class="list-inline-item"><a class="btn btn-text" href="<?php echo home_url('/about'); ?>">About</a></li>
-					
-					<li class="list-inline-item"><a class="btn btn-text" href="<?php echo home_url('/contact'); ?>">Contact</a></li>
-					
+										
 				</ul>
 
 			</div><!--col end -->
