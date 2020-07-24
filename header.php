@@ -65,6 +65,7 @@ defined( 'ABSPATH' ) || exit;
 					)
 				); ?>
 				
+				<div class="phone mr-3"><a href="tel:619-752-0885"><i class="fa fa-phone-square"></i> 619-752-0885</a></div>
 				<div class="ml-sm-auto d-none d-sm-block">
 					
 					<a href="<?php echo home_url('/get-started'); ?>" class="btn btn-primary">Get Started</a>
