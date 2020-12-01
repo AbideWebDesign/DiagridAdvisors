@@ -1,4 +1,5 @@
 h1 {
+	font-size: 48px;
 	font-weight: $h1-font-weight;
 	line-height: $h1-line-height;
 }
@@ -13,14 +14,27 @@ h3 {
 p {
 	font-size: $font-size-base;
 }
+.s {
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
 .text-sm {
 	font-size: $font-size-sm;
 }
+.text-gray {
+	color: $gray-600;
+}
 .lead {
 	margin-bottom: 40px;
+	font-size: 26px;
+	line-height: 40px;
+	font-weight: 300;
 }
 .lead p {
 	@extend .lead;
+}
+.lead-secondary {
+	font-size: $font-size-lg;
+	color: $gray-500;
 }
 .btn-white { 
 	@extend .btn-light;
@@ -127,6 +141,51 @@ button, .btn {
 }
 #hero-content-sub {
 	color: $gray-500;
+}
+#hero-form {
+	position: absolute;
+	top: 20px;
+	right: 90px;
+}
+.hero-image {
+	h1 {
+		margin-bottom: 2em;
+	}
+}
+.hero-stripe {
+	background: rgba(255, 255, 255, .85);
+	margin: -15px !important;
+	
+	strong {
+		color: $primary;
+		font-weight: bold;
+	}
+	.lead {
+		margin: 0 15px;
+		margin-bottom: 0;
+		color: #333;
+		
+		p {
+			margin-bottom: 1em;
+		}
+		ul {
+			margin-bottom: 0;
+		}
+		li {
+			margin-bottom: .85em;
+		}
+		li:last-child {
+			margin-bottom: 0;
+		}
+		.fa {
+			color: $secondary;
+		}
+	}
+}
+.hero-image {
+	background-size: cover;
+	margin-top: -121px;
+	padding: 10em 0;
 }
 /* Footer Top */
 #wrapper-footer-top{
@@ -335,4 +394,150 @@ button, .btn {
 			margin-bottom: .5em;
 		}
 	}
+}
+
+/*
+**  Memberpress
+*/
+.page-template-page-membership {
+	.mepr_error {
+		margin-bottom: 0 !important;
+		font-size: $font-size-sm;
+		
+	}
+}
+
+.mepr-form {
+	.mp-form-row {
+		@extend .form-group;
+		
+		input {
+			@extend .form-control;
+			
+			&[type=checkbox] {
+				display: inline-block;
+				width: auto;
+				vertical-align: middle;
+			}
+		}
+		label {
+			display: none !important;
+		}
+	}
+	.mepr-select-field {
+		@extend .custom-select;
+	}
+}
+#mepr-account-nav {
+	padding: 0em;
+	.mepr-nav-item {
+		padding: 0;
+	}	
+	
+	a {
+		text-transform: uppercase;
+		font-weight: bold;
+		color: white;
+		padding: .8em 1.2em;
+		
+		&:hover {
+			background-color: white;
+			color: $primary;
+			text-decoration: none;
+		}
+	}
+	.mepr-active-nav-tab {
+		a {
+			background-color: $light;
+			color: $primary;
+		}
+	}
+}
+#mepr-account-welcome-message {
+	color: white;
+}
+.mepr-account-change-password {
+	a {
+		@extend .btn;
+		@extend .btn-white;
+	}
+}
+.mepr-transaction-invoice-wrapper {
+	table {
+		@extend .table;
+		@extend .table-bordered;
+		@extend .table-sm;
+		background-color: white;
+	}
+}
+.mp_invoice {
+	font-size: $font-size-sm;
+}
+.mepr_tos {
+	a {
+		font-size: $font-size-sm;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.mepr-form input.invalid, .mepr-form select.invalid, .mepr-form textarea.invalid, .mepr-form label.mepr-checkbox-field.invalid, .mepr-form div.mepr-checkboxes-field.invalid, .mepr-form div.mepr-radios-field.invalid {
+	border: 1px solid #FF6666 !important;
+	background-color: #fff !important;
+}
+.mp_wrapper .mepr-form-has-errors, .mp_wrapper .cc-error, .mp_wrapper .mepr-validation-error {
+	color: #FF6666;
+	font-size: $font-size-sm;
+}
+#mepr-stripe-payment-form{
+	@extend .bg-white;
+	
+	input#mepr_strip_card_name {
+		@extend .form-control;
+	}
+	.mepr-submit {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+}
+.mepr-stripe-card-element {
+	@extend .form-control;
+}
+.bg-white {
+	.mepr-form .mp-form-row input {
+		border: 1px solid #ccc;
+	}
+}
+
+/* Resources */
+.resource-wrap {
+	h2 {
+		font-size: 33px;
+		font-weight: normal;
+		color: $body-color;
+	}
+}
+.loop-resource-image {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 250px;
+	
+	.loop-resource-image-icon {
+		z-index: 2;
+	}
+	.loop-resources-title {
+		font-size: 18px;
+	}
+}
+.bg-overlay {
+    position: absolute;
+    background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
 }
