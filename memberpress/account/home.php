@@ -48,9 +48,9 @@
 				
 				    <div class="mepr_spacer">&nbsp;</div>
 				
-				    <input type="submit" name="mepr-account-form" value="<?php _ex('Save Profile', 'ui', 'memberpress'); ?>" class="mepr-submit mepr-share-button btn btn-primary mr-3" />
+				    <input type="submit" name="mepr-account-form" value="<?php _ex('Save Profile', 'ui', 'memberpress'); ?>" class="mepr-submit mepr-share-button btn btn-primary mr-md-3" />
 				     
-					<a class="btn btn-brown" href="<?php echo $account_url.$delim.'action=newpassword'; ?>"><?php _ex('Change Password', 'ui', 'memberpress'); ?></a>
+					<a class="d-block mt-3" href="<?php echo $account_url.$delim.'action=newpassword'; ?>"><?php _ex('Change Password', 'ui', 'memberpress'); ?></a>
 				    
 				    <img src="<?php echo admin_url('images/loading.gif'); ?>" style="display: none;" class="mepr-loading-gif" />
 				    <?php MeprView::render('/shared/has_errors', get_defined_vars()); ?>

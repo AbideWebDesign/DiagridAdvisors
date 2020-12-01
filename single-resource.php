@@ -8,7 +8,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-get_header();
+get_header('simple');
 
 $user = wp_get_current_user();
 
@@ -22,7 +22,7 @@ $user = wp_get_current_user();
 		
 		<div class="row">
 			
-			<div class="col-12">
+			<div class="col-12 d-none d-md-block">
 				
 				<p class="mb-4"><a href="<?php echo home_url('/resource'); ?>"><i class="fa fa-chevron-left"></i> <?php _e('Back to Resources'); ?></a></p>
 				
@@ -30,9 +30,9 @@ $user = wp_get_current_user();
 			
 		</div>
 				
-		<div class="row justify-content-center">
+		<div class="row">
 			
-			<div class="col-xl-9">	
+			<div class="col-lg-9">	
 
 				<?php while ( have_posts() ) : the_post(); ?>
 

@@ -1,6 +1,6 @@
 <div class="row justify-content-between">
 
-	<div class="col-xl-auto">
+	<div class="col-md-8">
 
 		<h1 class="text-primary"><?php _e('Hello, ');?> <?php echo $user->first_name; ?> <?php echo $user->last_name; ?>!</h1>
 		
@@ -10,9 +10,9 @@
 	
 	</div>
 	
-	<div class="col-xl-auto align-self-center">
+	<div class="col-md-4 align-self-center d-none d-md-block text-right">
 		
-		<a href="<?php echo home_url('/account'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-user"></i> Manage Account</a>
+		<a href="<?php echo home_url('/account'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-user"></i> <?php _e('Manage Account'); ?></a>
 		
 	</div>
 	

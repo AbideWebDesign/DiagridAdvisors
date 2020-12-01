@@ -10,13 +10,13 @@
 		
 		</div>
 		
-		<div class="d-flex mepr-nav-item <?php MeprAccountHelper::active_nav('subscriptions'); ?>">
+		<div class="d-md-flex d-none d-md-block mepr-nav-item <?php MeprAccountHelper::active_nav('subscriptions'); ?>">
 		
 			<a href="<?php echo MeprHooks::apply_filters('mepr-account-nav-subscriptions-link',$account_url.$delim.'action=subscriptions'); ?>" id="mepr-account-subscriptions"><?php echo MeprHooks::apply_filters('mepr-account-nav-subscriptions-label',_x('Subscriptions', 'ui', 'memberpress')); ?></a>
 		
 		</div>
 			
-		<div class="d-flex mepr-nav-item <?php MeprAccountHelper::active_nav('payments'); ?>">
+		<div class="d-md-flex d-none d-md-block mepr-nav-item <?php MeprAccountHelper::active_nav('payments'); ?>">
 		
 			<a href="<?php echo MeprHooks::apply_filters('mepr-account-nav-payments-link',$account_url.$delim.'action=payments'); ?>" id="mepr-account-payments"><?php echo MeprHooks::apply_filters('mepr-account-nav-payments-label',_x('Payments', 'ui', 'memberpress')); ?></a>
 		
