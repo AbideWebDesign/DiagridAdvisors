@@ -18,7 +18,11 @@ $user = wp_get_current_user();
 
 	<div class="container" id="content" tabindex="-1">
 
-		<?php get_template_part( 'loop-templates/content', 'resource-top' ); ?>
+		<div class="d-none d-md-block">
+			
+			<?php get_template_part( 'loop-templates/content', 'resource-top' ); ?>
+			
+		</div>
 		
 		<div class="row">
 			

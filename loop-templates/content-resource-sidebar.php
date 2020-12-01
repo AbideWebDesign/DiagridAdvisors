@@ -23,7 +23,7 @@ $latest_resources = get_posts( $args );
 
 <?php if ( $latest_resources ): ?>
 
-	<div class="col-md-6 col-lg-3 mt-5 mt-xl-0">
+	<div class="col-md-6 col-lg-3 mt-5 mt-lg-0">
 	
 		<h4><?php _e('More Resources'); ?></h4>
 		
