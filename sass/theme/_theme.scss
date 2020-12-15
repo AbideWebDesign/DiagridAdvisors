@@ -423,9 +423,7 @@ button, .btn {
 				vertical-align: middle;
 			}
 		}
-		label {
-			display: none !important;
-		}
+
 	}
 	.mepr-select-field {
 		@extend .custom-select;
@@ -511,7 +509,12 @@ button, .btn {
 		border: 1px solid #ccc;
 	}
 }
-
+.mepr_updated {
+	background-color: transparent !important;
+	border: none !important;
+	color: white;
+	padding: 1em 0 0 !important;
+}
 /* Resources */
 .resource-wrap {
 	h2 {
@@ -543,4 +546,10 @@ button, .btn {
     height: 100%;
     width: 100%;
     z-index: 1;
+}
+.btn-get-started {
+	.mepr_product_link {
+		@extend .btn;
+		@extend .btn-primary;
+	}
 }

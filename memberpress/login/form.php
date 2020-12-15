@@ -56,10 +56,7 @@
 					    <div class="mepr-login-actions">
 					      <strong><a href="<?php echo $forgot_password_url; ?>" class="text-sm"><?php _ex('Forgot Password', 'ui', 'memberpress'); ?></a></strong>
 					    </div>
-					    <div class="text-center mt-4 text-sm">
-						    Not a member yet? <strong><a href="<?php echo home_url('/membership'); ?>">Sign Up</a></strong>
-					    </div>
-					    <!-- mp-login-form-end --> <?php //DON'T GET RID OF THIS HTML COMMENT PLEASE IT'S USEFUL FOR SOME REGEX WE'RE DOING ?>
+					   					    <!-- mp-login-form-end --> <?php //DON'T GET RID OF THIS HTML COMMENT PLEASE IT'S USEFUL FOR SOME REGEX WE'RE DOING ?>
 					
 					  <?php endif; ?>
 					</div>

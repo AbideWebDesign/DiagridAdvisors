@@ -3,6 +3,28 @@
     "title": "Resource Fields",
     "fields": [
         {
+            "key": "field_5fc96c037582c",
+            "label": "Membership",
+            "name": "membership",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "memberpressproduct"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
             "key": "field_5fc15dc0ae63a",
             "label": "Video URL",
             "name": "video_url",
@@ -98,5 +120,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1606839448
+    "modified": 1607036039
 }

@@ -20,8 +20,6 @@ $terms = get_terms( array ( 'taxonomy' => 'resource_category', 'hide_empty' => t
 
 	<div class="container" id="content" tabindex="-1">
 
-		<?php get_template_part( 'loop-templates/content', 'resource-top' ); ?>
-
 		<?php if ( ! empty( $terms ) ): ?>
 				
 			<?php foreach( $terms as $term ): ?>

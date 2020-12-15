@@ -1,17 +1,33 @@
 <?php if(!defined('ABSPATH')) {die('You are not allowed to call this page directly.');} ?>
 
- <?php if( !MeprUtils::is_user_logged_in() ): ?>
 
  <?php do_action('mepr-above-checkout-form', $product->ID); ?>
 
-	 <div class="mp_wrapper wrapper-sm s">
+	 <div class="mp_wrapper wrapper-sm">
 	
-		<div class="bg-light px-3 py-4">
-				
+		<div class="pb-4">
 			
-			<h2 class="text-primary text-center mb-1">Sign Up Today!</h2>
-							
-			<div class="text-sm text-gray text-center">Already a Member? <a href="<?php echo home_url('/login'); ?>">Login</a>.</div>
+			<h2 class="text-primary text-center mb-2"><?php the_field('purchase_title', 'options'); ?></h2>
+			
+			<h4 class="text-center text-gray"><i class="fa fa-play-circle"></i> <?php the_title(); ?></h4>
+			
+			 <?php if( ($product->register_price_action != 'hidden') && MeprHooks::apply_filters('mepr_checkout_show_terms',true) ): ?>
+		      <div class="mp-form-row mepr_bold mepr_price text-center">
+		        <?php $price_label = ($product->is_one_time_payment() ? _x('Price:', 'ui', 'memberpress') : _x('Terms:', 'ui', 'memberpress')); ?>
+		        <div class="mepr_price_cell_label"><?php echo $price_label; ?></div>
+		        <div class="mepr_price_cell">
+		          <?php MeprProductsHelper::display_invoice( $product, $mepr_coupon_code ); ?>
+		        </div>
+		      </div>
+		    <?php endif; ?>
+		
+			<?php $price_label = ($product->is_one_time_payment() ? _x('Price:', 'ui', 'memberpress') : _x('Terms:', 'ui', 'memberpress')); ?>
+
+			<?php if(!MeprUtils::is_user_logged_in()): ?>				
+			
+				<div class="text-sm text-gray text-center"><?php _e('Already have an account?'); ?> <a href="<?php echo home_url('/login'); ?>">Login</a>.</div>
+				
+			<?php endif; ?>
 				
 		</div>
 	
@@ -26,26 +42,6 @@
 		      <input type="hidden" name="mepr_checkout_nonce" value="<?php echo esc_attr(wp_create_nonce('logged_in_purchase')); ?>">
 		      <?php wp_referer_field(); ?>
 		    <?php endif; ?>
-		
-		<!--
-		    <?php if( ($product->register_price_action != 'hidden') && MeprHooks::apply_filters('mepr_checkout_show_terms',true) ): ?>
-		      <div class="mp-form-row mepr_bold mepr_price">
-		        <?php $price_label = ($product->is_one_time_payment() ? _x('Price:', 'ui', 'memberpress') : _x('Terms:', 'ui', 'memberpress')); ?>
-		        <div class="mepr_price_cell_label"><?php echo $price_label; ?></div>
-		        <div class="mepr_price_cell">
-		          <?php MeprProductsHelper::display_invoice( $product, $mepr_coupon_code ); ?>
-		        </div>
-		      </div>
-		    <?php endif; ?>
-		-->
-			<?php $price_label = ($product->is_one_time_payment() ? _x('Price:', 'ui', 'memberpress') : _x('Terms:', 'ui', 'memberpress')); ?>
-			
-	<!--
-					
-			<h3 class="text-white">Create Account</h3>
-			
-			<hr>
-	-->
 			
 		    <?php MeprHooks::do_action('mepr-checkout-before-name', $product->ID); ?>
 		
@@ -192,7 +188,7 @@
 		      </div>
 		    <?php endif; ?>
 			<div class="mb-form-row text-sm">
-				By signing up you agree to Diagrid Advisors Terms of Service and Privacy Policy. You will be charged <?php MeprProductsHelper::display_invoice( $product, $mepr_coupon_code ); ?> and can cancel at any time.
+				<?php the_field('terms_message', 'options'); ?>
 			</div>
 		    <?php MeprHooks::do_action('mepr-user-signup-fields'); //Deprecated ?>
 		    <?php MeprHooks::do_action('mepr-checkout-before-submit', $product->ID); ?>
@@ -204,11 +200,10 @@
 		      <label for="mepr_no_val" class="mepr-visuallyhidden"><?php _ex('No val', 'ui', 'memberpress'); ?></label>
 		      <input type="text" id="mepr_no_val" name="mepr_no_val" class="mepr-form-input mepr-visuallyhidden mepr_no_val mepr-hidden" autocomplete="off" />
 		
-		      <input type="submit" class="btn btn-primary btn-lg btn-block" value="<?php echo stripslashes($product->signup_button_text); ?>" />
+		      <input type="submit" class="btn btn-primary btn-lg btn-block" value="<?php the_field('purchase_button_label', 'options'); ?>" />
 		      <img src="<?php echo admin_url('images/loading.gif'); ?>" style="display: none;" class="mepr-loading-gif" title="<?php _ex('Loading icon', 'ui', 'memberpress'); ?>" />
 		      <?php MeprView::render('/shared/has_errors', get_defined_vars()); ?>
 		    </div>
 		  </form>
 		</div>
 	</div>
-<?php endif; ?>
