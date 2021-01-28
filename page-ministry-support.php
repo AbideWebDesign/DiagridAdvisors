@@ -152,54 +152,6 @@ get_header();
 		
 	</div>
 	
-	<div id="wrapper-footer-top" class="bg-secondary">
-		
-		<div class="container-fluid">
-			
-			<div class="row">
-				
-				<div id="footer-top-left" class="col-md-6 bg-light">
-					
-					<div class="row justify-content-between">
-						
-						<div class="col-lg-5">
-
-							<?php echo wp_get_attachment_image( get_field('footer_image'), 'full', false, array('class'=>'img-fluid') ); ?>
-							
-						</div>
-
-						<div class="col-lg-5 wrapper align-self-center">
-							
-							<div class="px-3 px-lg-0 pr-lg-5 text-center text-lg-left">
-								
-								<p class="lead"><?php the_field('footer_left_text'); ?></p>
-								
-								<a href="<?php echo home_url('/get-started'); ?>" class="btn btn-secondary"><?php _e('Talk to an Advisor'); ?></a>
-								
-							</div>
-							
-						</div>
-						
-					</div>
-					
-				</div>
-				
-				<div class="col-md-6 align-self-center text-center wrapper">
-					
-					<h2 class="text-white"><?php the_field('footer_right_title'); ?></h2>
-					
-					<p class="lead text-white"><?php the_field('footer_right_text'); ?></p>
-					
-					<a href="<?php echo home_url('/get-started'); ?>" class="btn btn-white"><?php _e('Get Started'); ?></a>
-					
-				</div>
-				
-			</div>
-			
-		</div>
-		
-	</div>
-
 </div><!-- #page-wrapper -->
 
 <?php get_footer();
