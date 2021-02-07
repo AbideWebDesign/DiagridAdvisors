@@ -63,7 +63,7 @@ defined( 'ABSPATH' ) || exit;
 								'menu_class'      => 'navbar-nav mr-auto ml-5',
 								'fallback_cb'     => '',
 								'menu_id'         => 'main-menu',
-								'depth'           => 1,
+								'depth'           => 2,
 								'walker'          => new diagrid_WP_Bootstrap_Navwalker(),
 							)
 						); 
@@ -72,23 +72,18 @@ defined( 'ABSPATH' ) || exit;
 					
 				<?php else: ?>
 				
-					<?php 
-					
-						wp_nav_menu(
-							array(
-								'theme_location'  => 'menu-loggedout',
-								'container_class' => 'collapse navbar-collapse',
-								'container_id'    => 'navbarNavDropdown',
-								'menu_class'      => 'navbar-nav mr-auto ml-5',
-								'fallback_cb'     => '',
-								'menu_id'         => 'main-menu',
-								'depth'           => 1,
-								'walker'          => new diagrid_WP_Bootstrap_Navwalker(),
-							)
-						); 
-					
-					?>
-				
+					<?php wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'container_class' => 'collapse navbar-collapse',
+							'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'navbar-nav ml-auto',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu',
+							'depth'           => 2,
+							'walker'          => new diagrid_WP_Bootstrap_Navwalker(),
+						)
+					); ?>
 				<?php endif; ?>
 				
 				<div class="phone mr-3"><a href="tel:619-752-0885"><i class="fa fa-phone-square"></i> <?php _e('619-752-0885'); ?></a></div>
