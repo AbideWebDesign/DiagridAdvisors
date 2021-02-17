@@ -77,7 +77,7 @@ defined( 'ABSPATH' ) || exit;
 							'theme_location'  => 'primary',
 							'container_class' => 'collapse navbar-collapse',
 							'container_id'    => 'navbarNavDropdown',
-							'menu_class'      => 'navbar-nav ml-auto',
+							'menu_class'      => 'navbar-nav mr-auto',
 							'fallback_cb'     => '',
 							'menu_id'         => 'main-menu',
 							'depth'           => 2,
