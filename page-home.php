@@ -152,6 +152,46 @@ get_header();
 		
 	</div>
 	
+	<div id="wrapper-founders" class="wrapper bg-primary">
+		
+		<div class="container">
+			
+			<div class="row justify-content-center">
+				
+				<div class="col-auto"><h2 class="text-white text-center mb-5"><?php the_field('founders_title'); ?></h2></div>
+				
+			</div>
+			
+			<div class="row justify-content-center">
+				
+				<div class="col-md-6 col-lg-4 text-center">
+					
+					<?php echo wp_get_attachment_image( get_field('founder_image_1'), 'large', false, array( 'class' => 'img-fluid rounded-circle mb-3 border-lg' ) ); ?>
+					
+					<h3 class="text-white mb-4 mb-md-0"><?php the_field('founder_name_1'); ?></h3>
+					
+				</div>
+				
+				<div class="col-md-6 col-lg-4 text-center">
+					
+					<?php echo wp_get_attachment_image( get_field('founder_image_2'), 'large', false, array( 'class' => 'img-fluid rounded-circle mb-3 border-lg' ) ); ?>
+					
+					<h3 class="text-white"><?php the_field('founder_name_2'); ?></h3>
+					
+				</div>
+				
+				<div class="col-12 text-center mt-5">
+					
+					<a href="<?php echo home_url('/meet-the-founders'); ?>" class="btn btn-light">Meet the Founders</a>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
 	<div id="wrapper-footer-top" class="bg-secondary">
 		
 		<div class="container-fluid">
@@ -162,15 +202,17 @@ get_header();
 					
 					<div class="row justify-content-between">
 						
-						<div class="col-lg-5">
+						<div class="col-xl-5 d-none d-xl-block">
 
 							<?php echo wp_get_attachment_image( get_field('footer_image'), 'full', false, array('class'=>'img-fluid') ); ?>
 							
 						</div>
 
-						<div class="col-lg-5 wrapper align-self-center">
+						<div class="col-xl-5 align-self-center">
 							
-							<div class="px-3 px-lg-0 pr-lg-5 text-center text-lg-left">
+							<div class="px-4 px-xl-0 pr-xl-5 py-5 py-xl-0 text-center text-xl-left">
+																
+								<h2 class="text-secondary d-xl-none">Talk to an Advisor</h2>
 								
 								<p class="lead"><?php the_field('footer_left_text'); ?></p>
 								
@@ -188,7 +230,7 @@ get_header();
 					
 					<h2 class="text-white"><?php the_field('footer_right_title'); ?></h2>
 					
-					<p class="lead text-white"><?php the_field('footer_right_text'); ?></p>
+					<p class="lead text-white px-4 px-lg-0"><?php the_field('footer_right_text'); ?></p>
 					
 					<a href="<?php echo home_url('/get-started'); ?>" class="btn btn-white">Get Started</a>
 					

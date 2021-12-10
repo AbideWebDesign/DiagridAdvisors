@@ -36,6 +36,9 @@ p {
 	font-size: $font-size-lg;
 	color: $gray-500;
 }
+.border-lg {
+	border: 10px solid white;
+}
 .btn-white { 
 	@extend .btn-light;
 }

@@ -24,7 +24,15 @@ defined( 'ABSPATH' ) || exit;
 					
 					<div class="pr-md-3 pb-3 pb-md-0 text-center text-md-left"><a href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image( get_field('logo_dark', 'options'), 'full', false, array('class'=>'img-fluid', 'style'=>'width:150px') ); ?></a></div>
 					
-					<div class="align-self-center text-center text-md-left"><a class="btn-text text-lg mb-2 d-block" href="<?php echo home_url('/about'); ?>">About</a>© <?php echo date('Y'); ?> Diagrid Advisors. All Rights Reserved.<br><a href="https://abidewebdesign.com" target="_blank">Website Design and Maintenance by Abide Web Design</a></div>
+					<div class="align-self-center text-center text-md-left">
+						
+						<div class="mb-2">
+						
+							<a class="btn-text text-lg" href="<?php echo home_url('/about'); ?>">About</a> | <a class="btn-text text-lg" href="<?php echo home_url('/meet-the-founders'); ?>">Meet the Founders</a>
+						
+						</div>
+						
+						© <?php echo date('Y'); ?> Diagrid Advisors. All Rights Reserved.<br><a href="https://abidewebdesign.com" target="_blank">Website Design and Maintenance by Abide Web Design</a></div>
 					
 				</div>
 				
