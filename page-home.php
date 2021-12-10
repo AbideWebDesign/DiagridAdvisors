@@ -198,31 +198,13 @@ get_header();
 			
 			<div class="row">
 				
-				<div id="footer-top-left" class="col-md-6 bg-light">
+				<div id="footer-top-left" class="col-md-6 bg-light align-self-center text-center wrapper">
+																					
+					<h2 class="text-secondary">Talk to an Advisor</h2>
 					
-					<div class="row justify-content-between">
-						
-						<div class="col-xl-5 d-none d-xl-block">
-
-							<?php echo wp_get_attachment_image( get_field('footer_image'), 'full', false, array('class'=>'img-fluid') ); ?>
-							
-						</div>
-
-						<div class="col-xl-5 align-self-center">
-							
-							<div class="px-4 px-xl-0 pr-xl-5 py-5 py-xl-0 text-center text-xl-left">
-																
-								<h2 class="text-secondary d-xl-none">Talk to an Advisor</h2>
-								
-								<p class="lead"><?php the_field('footer_left_text'); ?></p>
-								
-								<a href="<?php echo home_url('/get-started'); ?>" class="btn btn-secondary">Talk to an Advisor</a>
-								
-							</div>
-							
-						</div>
-						
-					</div>
+					<p class="lead px-4"><?php the_field('footer_left_text'); ?></p>
+					
+					<a href="<?php echo home_url('/get-started'); ?>" class="btn btn-secondary">Talk to an Advisor</a>
 					
 				</div>
 				
